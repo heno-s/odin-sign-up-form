@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Sign up form</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <header>
+                    <img
+                        src="/images/odin.png"
+                        alt="odin logo"
+                        class="logo-image"
+                    /><span>Odin</span>
+                </header>
+                <footer>
+                    Photo by
+                    <a href="https://unsplash.com/@haliewestphoto"
+                        >Halie West</a
+                    >
+                    on <a href="https://unsplash.com/">Unsplash</a>
+                </footer>
+            </div>
+            <main>
+                <p>
+                    This is not a real online service! You know you
+                    need something like this in your life to help you
+                    realize your deepest dreams. Sign up now to get
+                    started.
+                </p>
+                <p>You <em>know</em> you want to.</p>
+                <form id="sign-up-form" novalidate>
+                    <h2>Lets do this!</h2>
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label for="first-name">first name</label
+                            ><input
+                                type="text"
+                                id="first-name"
+                                name="firstName"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">last name</label
+                            ><input
+                                type="text"
+                                id="last-name"
+                                name="lastName"
+                                placeholder=" "
+                                required
+                            />
+                            <span
+                                class="error"
+                                title="This field is required"
+                            ></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label
+                            ><input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder=" "
+                                required
+                            />
+                            <span class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">phone number</label
+                            ><input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">password</label
+                            ><input
+                                name="password"
+                                id="password"
+                                type="password"
+                                required
+                                placeholder=" "
+                                minlength="8"
+                            />
+                            <span class="error"
+                                >Field has to be 8 characters
+                                long</span
+                            >
+                            <div
+                                id="password-errors"
+                                class="error"
+                            ></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password"
+                                >confirm password</label
+                            ><input
+                                id="confirm-password"
+                                name="confirm"
+                                type="password"
+                                placeholder=" "
+                                required
+                            />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                </form>
+                <button form="sign-up-form">create account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </main>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

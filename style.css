@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "norse";
+    src: url(/fonts/Norse-Bold.otf) format("opentype");
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    background: url(/images/bg.jpg);
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    text-align: center;
+    color: #fff;
+}
+
+header {
+    font: 4rem "norse";
+    margin-top: 25vh;
+    padding: 20px 0;
+    background-color: #0007;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    font-size: 0.7rem;
+}
+
+footer a {
+    color: #fff;
+}
+
+.logo-image {
+    width: 60px;
+}
+
+main {
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 50px;
+    flex: 1 1 50%;
+}
+
+main > p:not(:last-of-type) {
+    max-width: 800px;
+    font-weight: bold;
+}
+main > p:last-of-type a {
+    color: #596d48;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form {
+    background-color: #fff;
+    width: calc(100% + 100px);
+    margin-left: -50px;
+    padding: 40px 50px;
+}
+
+form > h2 {
+    margin-bottom: 1.2rem;
+}
+
+.form-body {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    gap: 15px 10px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 0 0 2px blue;
+}
+
+input:invalid:not(:placeholder-shown):not(:focus) {
+    border: 1px solid red;
+}
+
+.validated input:invalid:not(:focus) {
+    border: 1px solid red;
+}
+
+.error {
+    font-size: 0.7rem;
+    color: red;
+    height: 0.7rem;
+    visibility: hidden;
+}
+
+.error::before {
+    content: "! " + attr(title);
+    font-weight: bold;
+    visibility: hidden;
+}
+
+input:invalid:not(:placeholder-shown):not(:focus) + .error,
+input:invalid:not(:placeholder-shown):not(:focus) + .error::before {
+    visibility: visible;
+}
+
+.validated input:invalid + .error,
+.validated input:invalid + .error::before {
+    visibility: visible;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    padding: 0.7em 2em;
+    background-color: #596d48;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
