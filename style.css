@@ -6,13 +6,13 @@
 
 @font-face {
     font-family: "norse";
-    src: url(/fonts/Norse-Bold.otf) format("opentype");
+    src: url(./fonts/Norse-Bold.otf) format("opentype");
     font-weight: normal;
 }
 
 .container {
     display: flex;
-    background: url(/images/bg.jpg);
+    background: url(./images/bg.jpg);
     background-size: contain;
     min-height: 100vh;
 }
@@ -125,8 +125,7 @@ input:invalid:not(:placeholder-shown):not(:focus) {
 }
 
 .error::before {
-    content: "! " + attr(title);
-    font-weight: bold;
+    content: attr(title);
     visibility: hidden;
 }
 
